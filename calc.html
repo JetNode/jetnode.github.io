@@ -19,7 +19,7 @@
     </head>
     <body>
         <header class="utility header">
-            <a href="javascript:summonMenu();" class="headerLink"><i class="material-icons headerIcon">menu</i></a>
+            <a onclick="summonMenu();" class="headerLink"><i class="material-icons headerIcon">menu</i></a>
             <img src="branding/small.svg" alt="JetNode Logo" class="headerLogo">
             <span class="headerName">JetNode</span>
         </header>
@@ -29,10 +29,19 @@
         <div class="semiTransparent" style="display: none;" onclick="hideMenu();"></div>
         <div class="menu" style="display: none;">
             <div class="menuHeader">
-                <a href="javascript:hideMenu();" class="menuLink"><i class="material-icons menuToggle">clear</i></a><br>
+                <a onclick="hideMenu();" class="menuExit"><i class="material-icons menuToggle">clear</i></a><br>
             </div>
             <div class="menuMain">
-                <span class="menuName">JetNode</span>
+                <br>
+                <span class="menuName">JetNode</span><br><br>
+                <button class="menuLink" onclick="window.location.href = '/'">
+                    <i class="material-icons menuLinkIcon">home</i>
+                    <span class="menuLinkText">Home</span>
+                </button>
+                <button class="menuLink selected" onclick="window.location.href = '/calc'">
+                    <i class="material-icons menuLinkIcon">add</i>
+                    <span class="menuLinkText">Calculator</span>
+                </button>
             </div>
         </div>
     </body>
