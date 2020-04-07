@@ -1,0 +1,48 @@
+* {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+html {
+    margin: 0;
+    border: 0;
+    background-color: #2e2e2e;
+}
+
+body {
+    margin: 0;
+    border: 0;
+    text-align: center;
+}
+
+.homeLogo {
+    height: 150px;
+    margin-top: 30px;
+}
+
+.homeText {
+    color: #d9d9d9;
+    text-align: center;
+    font-size: 27pt;
+    margin-top: 40px;
+}
+
+.homeSpan {
+    color: #d9d9d9;
+    text-align: center;
+    font-size: 15pt;
+}
+
+.homeLink {
+    color: #d9d9d9;
+    text-align: center;
+    font-size: 12pt;
+}
+
+button {
+    background-color: #2e2e2e;
+    color: #d9d9d9;
+    border: solid #d9d9d9 2px;
+    font-size: 15pt;
+    padding: 5px;
+    border-radius: 5px;
+}
