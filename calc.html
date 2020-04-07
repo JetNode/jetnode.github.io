@@ -4,6 +4,7 @@
         <title>Calculator | JetNode</title>
         <script src="lib/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
@@ -23,9 +24,16 @@
             <img src="branding/small.svg" alt="JetNode Logo" class="headerLogo">
             <span class="headerName">JetNode</span>
         </header>
-        <main>
-            
+        <main class="utility">
+            <h1 class="pageTitle">Calculator</h1>
+            <p class="pageParagraph">JetNode has several powerful calculators. Try one!</p>
+            <div class="calculatorChoice">
+                <button class="utilityChoice" onclick="summonUnitConverter();"><i class="material-icons utilityChoiceIcon">autorenew</i><span class="utilityChoiceText">Unit Conversion</span></button>
+            </div>
         </main>
+        <div class="unitConverter" style="display: none;">
+            <a onclick="hideUnitConverter();" class="calcExit"><i class="material-icons calcExitIcon">clear</i></a><br>
+        </div>
         <div class="semiTransparent" style="display: none;" onclick="hideMenu();"></div>
         <div class="menu" style="display: none;">
             <div class="menuHeader">
