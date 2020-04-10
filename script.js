@@ -52,3 +52,12 @@ function selectDropdown(choiceClass) {
         $(".selectionBoxDropdown." + choiceClass).fadeIn();
     }
 }
+
+function submitDropdown(buttonClass, dropdownClass) {
+    var fullButtonClass = '.choice.' + buttonClass;
+    var buttonText = $(fullButtonClass).text();
+    localStorage.originalChoice = buttonText;
+    $(".dropdownOpener." + dropdownClass).toggleClass('flip');
+    closeDropdown(dropdownClass);
+    $(".dropdownOpenerText." + dropdownClass).text(buttonText);
+}
