@@ -7,6 +7,7 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <script src="calc.js"></script>
         <script src="script.js"></script>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,10 +19,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
         <meta name="Description" content="JetNode - Making unified tools for the internet to use.">
     </head>
-    <body>
+    <body onload="pageLoad();">
         <header class="utility header">
             <a onclick="summonMenu();" class="headerLink"><i class="material-icons headerIcon">menu</i></a>
-            <img src="branding/small.svg" alt="JetNode Logo" class="headerLogo">
+            <img src="branding/small.svg" alt="JetNode Logo" class="headerLogo" onclick="summonMenu();">
             <span class="headerName">JetNode</span>
         </header>
         <main class="utility">
@@ -31,8 +32,41 @@
                 <button class="utilityChoice" onclick="summonUnitConverter();"><i class="material-icons utilityChoiceIcon">autorenew</i><span class="utilityChoiceText">Unit Conversion</span></button>
             </div>
         </main>
-        <div class="unitConverter" style="display: none;">
-            <a onclick="hideUnitConverter();" class="calcExit"><i class="material-icons calcExitIcon">clear</i></a><br>
+        <div class="page unitConverter" style="display: none;">
+            <div class="pageMain">
+                <a onclick="hideUnitConverter();" class="calcExit"><i class="material-icons calcExitIcon">clear</i></a><br>
+                <h1>Unit Conversion Calculator</h1>
+                <br>
+                <h2>Which unit category would you like to convert between?</h2>
+                <button class="deepChoice length" onclick="selectDeepChoice('length');"><i class="material-icons utilityChoiceIcon">straighten</i><span class="deepChoiceText">Length</span></button>
+                <button class="deepChoice area" onclick="selectDeepChoice('area');"><i class="material-icons utilityChoiceIcon">crop</i><span class="deepChoiceText">Area</span></button>
+                <button class="deepChoice volume" onclick="selectDeepChoice('volume');"><i class="material-icons utilityChoiceIcon">local_cafe</i><span class="deepChoiceText">Volume</span></button>
+                <button class="deepChoice speed" onclick="selectDeepChoice('speed');"><i class="material-icons utilityChoiceIcon">speed</i><span class="deepChoiceText">Speed</span></button>
+                <button class="deepChoice mass" onclick="selectDeepChoice('mass');"><i class="material-icons utilityChoiceIcon">fitness_center</i><span class="deepChoiceText">Mass</span></button>
+                <button class="deepChoice temperature" onclick="selectDeepChoice('temperature');"><i class="material-icons utilityChoiceIcon">whatshot</i><span class="deepChoiceText">Temperature</span></button>
+                <br>
+                <div class="lengthConverterHolder converterHolder" style="display: none;">
+                    <br><br>
+                    <div class="selectionBox length">
+                        <button class="selectionBoxOpener lengthOriginal" onclick="selectDropdown('lengthOriginal');"><span class="dropdownOpenerText">Select One</span><i class="material-icons dropdownOpener lengthOriginal">arrow_drop_down</i></button>
+                        <div class="selectionBoxDropdown lengthOriginal" style="display: none;">
+                            <span class="choiceTitle">Length</span>
+                            <button class="choice">Nanometres - nm</button>
+                            <button class="choice">Micrometres - μm</button>
+                            <button class="choice">Millimetres - mm</button>
+                            <button class="choice">Centimetres - cm</button>
+                            <button class="choice">Metres - m</button>
+                            <button class="choice">Kilometres - km</button>
+                            <button class="choice">Inch - in</button>
+                            <button class="choice">Feet - ft</button>
+                            <button class="choice">Yard - yd</button>
+                            <button class="choice">Miles - mi</button>
+                            <button class="choice">Nautical Mile - nmi</button>
+                            <button class="choice">Light Years - ly</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="semiTransparent" style="display: none;" onclick="hideMenu();"></div>
         <div class="menu" style="display: none;">
